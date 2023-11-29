@@ -17,9 +17,19 @@ fetch('https://www.themealdb.com/api/json/v1/1/random.php')
         imageElement.style.borderRadius = '10px'
         imageElement.setAttribute('id','mo')
 
-        if(window.innerWidth <= 767){
-            imageElement.style.height = '200px'
+        function adjustImageWidth() {
+            if (window.innerWidth <= 767) {
+                imageElement.style.width = '500px';
+            } else {
+                imageElement.style.width = '50%';
+            }
         }
+        
+        // Call the function initially to set the initial width
+        adjustImageWidth();
+        
+        // Add an event listener to re-adjust the width when the window is resized
+        window.addEventListener('resize', adjustImageWidth);
        
         var modal = document.getElementById("myModal");
 

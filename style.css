@@ -242,7 +242,7 @@ input:hover{
     }
 
     header {
-        font-size: 30px;
+        font-size: 60px;
     }
 
     .fo {
@@ -273,13 +273,25 @@ input:hover{
     }
 
     .foodImage {
-        top: 10px;
+        top: 600px;
         left: 10px;
         width: calc(100% - 20px);
     }
 
+
+}
+
+
+@media only screen and (max-width: 1200px) {
     #iki {
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #iki {
+        display: grid;
+        grid-template-columns: repeat(2, );
     }
 }
